@@ -1,18 +1,19 @@
-#include <iostream>
-#include "Vertex.hpp"
-#include "Edge.hpp"
+
 
 #ifndef __Graph__
     #define __Graph__
 
-        class Graph{
+    #include <iostream>
+    #include "Vertex.hpp"
+    #include "Edge.hpp"
 
+        class Graph{
+             // on créé un graph vide d'abord puis on y ajoute des sommets, les sommets ont un id unique par graph, 1 puis 2 etc... qui se fait tt seuls 
+            //Le graph sait combien il a de sommets, les sommets non.
             public:
+
                 Graph();
                 
-                // on créé un graph vide d'abord puis on y ajoute des sommets, les sommets ont un id unique par graph, 1 puis 2 etc... qui se fait tt seuls 
-                //Le graph sait combien il a de sommets, les sommets non.
-
                 Vertex* Get_Vertices();
                 Edge* Get_Edges();
                 int Get_vertices_count();

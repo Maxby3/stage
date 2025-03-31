@@ -30,7 +30,7 @@ int Vertex::Get_id(){
     return this->id;
 }
 
-int Vertex::Get_adjacency(){
+int* Vertex::Get_adjacency(){
 
     return 0;
 }

@@ -1,9 +1,11 @@
-#include <iostream>
-#include <string>
-#include "Graph.cpp"
+
 
 #ifndef __Vertex__
     #define __Vertex__
+
+    #include <iostream>
+    #include <string>
+    #include "Graph.cpp"
 
         class Vertex{
 
