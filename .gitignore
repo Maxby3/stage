@@ -1,0 +1,6 @@
+# Ignorer tous les fichiers .log
+*.log
+#ignore vscode
+/.vscode
+#ignore prog
+prog
