@@ -18,10 +18,10 @@ Graph::Graph() : vertices_count(0)
 Edge* Graph::Get_Edges(){
     
 };
-/* Vertex* Graph::Get_Vertices(){
+Vertex* Graph::Get_Vertices(){
 
     return this->Vertices;
-}; */
+};
 int Graph::Get_vertices_count(){
 
     return this->vertices_count;
@@ -33,4 +33,22 @@ int* Graph::Get_adjacency_list(){
 int Graph::Id_new_vertex(){
 
     return this->vertices_count + 1;
-}
+};
+
+void Graph::Set_Vertices(Vertex* verti){
+
+    this->Vertices = verti;
+
+};
+
+void Graph::Set_Edges(Edge* edg){
+
+    this->Edges = edg;
+
+};
+
+void Graph::Add_Vertices(Vertex* verti){
+
+    
+
+};

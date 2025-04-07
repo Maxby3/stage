@@ -5,7 +5,7 @@
 
     #include <iostream>
     #include <string>
-    #include "Graph.cpp"
+    #include "Graph.hpp"
 
         class Vertex{
 

@@ -7,6 +7,13 @@
 
             public:
                 Edge();
+
+                int* Get_extremity();
+                void Set_extremity();
+
+            private:
+
+            int* extremity ;
         };
     
 

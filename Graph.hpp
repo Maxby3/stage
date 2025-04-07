@@ -13,15 +13,21 @@
             public:
 
                 Graph();
+                Graph(int* adjacency_list);
+                //Graph(Vertex* Vertices, Edge* Edges); peut etre interessant à faire, pas pour le moment
+                
                 
                 Vertex* Get_Vertices();
                 Edge* Get_Edges();
                 int Get_vertices_count();
                 int* Get_adjacency_list();
 
-                int Set_Vertices();
-                int Set_Edges();
-                int Set_adjacency_list();
+                void Set_Vertices(Vertex*);
+                void Set_Edges(Edge*);
+                void Set_adjacency_list(int*);
+
+                void Add_Vertices(Vertex*);
+                void Add_Edges(Edge*);
 
                 int Id_new_vertex();
 
