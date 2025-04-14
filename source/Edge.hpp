@@ -1,7 +1,9 @@
-#include <iostream>
+
 
 #ifndef __Edge__
     #define __Edge__
+
+        #include <iostream>
 
         class Edge{
 

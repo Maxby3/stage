@@ -5,21 +5,18 @@
 
     #include <iostream>
     #include <string>
-    #include "Graph.hpp"
+    #include <vector>
 
         class Vertex{
 
             public:
 
                 Vertex();
-                Vertex(Graph graph);
-                Vertex(Graph graph, int* adjacency);
+                Vertex(int* adjacency);
 
-                Graph Get_graph();
                 int Get_id();
                 int* Get_adjacency();
 
-                int Set_graph();
                 int Set_id();
                 int Set_adjacency();
 
@@ -27,13 +24,9 @@
 
                 int* adjacency;
                 int id;
-                Graph graph;
+                         
 
-                
-
-                
-
-
+            
         };
     
 

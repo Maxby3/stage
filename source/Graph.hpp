@@ -17,13 +17,13 @@
                 //Graph(Vertex* Vertices, Edge* Edges); peut etre interessant à faire, pas pour le moment
                 
                 
-                Vertex* Get_Vertices();
-                Edge* Get_Edges();
+                std::vector<Vertex*> Get_Vertices();
+                std::vector<Edge*> Get_Edges();
                 int Get_vertices_count();
                 int* Get_adjacency_list();
 
-                void Set_Vertices(Vertex*);
-                void Set_Edges(Edge*);
+                void Set_Vertices(std::vector<Vertex*>);
+                void Set_Edges(std::vector<Edge*>);
                 void Set_adjacency_list(int*);
 
                 void Add_Vertices(Vertex*);
@@ -32,8 +32,8 @@
                 int Id_new_vertex();
 
             private:
-                Vertex* Vertices;
-                Edge* Edges;
+                std::vector<Vertex*> Vertices;
+                std::vector<Edge*> Edges;
                 int vertices_count;
                 int* adjacency_list;
 
