@@ -71,5 +71,7 @@ int main(){
   
    // g++ -std=c++20 -Wall -Wextra main.cpp -o testing 
 
+   // cmake .. puis cmake --build .
+
     return 0;
 }
