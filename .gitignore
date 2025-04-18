@@ -4,3 +4,7 @@
 /.vscode
 #ignore prog
 prog
+#ignore build of cadical
+/build
+#ignore build of the project
+/build_project
