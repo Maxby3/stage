@@ -6,6 +6,7 @@
     #include <iostream>
     #include <vector>
     #include <list>
+    #include "Vertex.hpp"
 
 
         //déclaration anticipé
@@ -29,6 +30,7 @@
                 void Set_adjacency_list(int*);
 
                 void Add_Vertices(std::vector<Vertex*> vertices);
+                void Add_Vertices(Vertex* vertex);
                 
 
                 int Id_new_vertex();

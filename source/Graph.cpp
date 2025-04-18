@@ -1,11 +1,11 @@
 #include <iostream>
 #include "Graph.hpp"
-#include "Vertex.hpp"
+
 
 
 int vertices_count;
 int* adjacency_list;
-std::vector<Vertex> Vertices;
+std::vector<Vertex*> Vertices;
 
 Graph::Graph() : vertices_count(0), adjacency_list(), Vertices({}){};
 
@@ -39,5 +39,12 @@ void Graph::Set_Vertices(std::vector<Vertex*> verti){
 void Graph::Add_Vertices( std::vector<Vertex*> vertices) {
     if (!vertices.empty()) {
         this->Vertices.insert(this->Vertices.end(), vertices.begin(), vertices.end());
+        this->vertices_count += vertices.size();
     }
+}
+
+void Graph::Add_Vertices(Vertex* vertex){
+
+    this->Vertices.push_back(vertex);
+    this->vertices_count +=1;
 }

@@ -12,17 +12,18 @@
             public:
 
                 Vertex();
-                Vertex(int* adjacency);
+                Vertex(std::vector<int> adjacency);
 
                 int Get_id();
-                int* Get_adjacency();
+                std::vector<int> Get_adjacency();
 
-                int Set_id();
-                int Set_adjacency();
+                void Set_id(int);
+                void Set_adjacency(std::vector<int>);
 
             private:
 
-                int* adjacency;
+                std::vector<int> adjacency;
+                static int number;
                 int id;
                          
 

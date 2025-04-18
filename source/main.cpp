@@ -10,8 +10,39 @@ int main(){
 
     Graph graph1{};
     int number_vertices = graph1.Get_vertices_count();
-
     std::cout << "il y a " << number_vertices << " sommets dans le graph" << std::endl;
+
+    Vertex vertex1{};
+    Vertex vertex2{};
+
+    //std::vector<Vertex*> Vertices
+    Vertex* v1p = &vertex1;
+    graph1.Add_Vertices(v1p);
+    graph1.Add_Vertices(&vertex2);
+
+    number_vertices = graph1.Get_vertices_count();
+
+    std::cout << "il y a maintenant " << number_vertices << " sommets dans le graph" << std::endl;
+
+    std::vector<Vertex*> vec = graph1.Get_Vertices(); 
+
+    Vertex* tes1 = vec.front() ;
+    int id1 = tes1->Get_id();
+    std::cout << "l'id du premier sommet est " << id1 << "!" << std::endl;
+    
+    // it = std::next(it) c'est la meme chose que it++
+    for( std::vector<Vertex*>::iterator it{std::begin(vec)} ; it != std::end(vec); it = std::next(it)){
+        
+        if (*it != nullptr) {
+
+            int index = std::distance(vec.begin(), it);
+            int iddd = (**it).Get_id();
+            std::cout << "l'id du sommet " << index <<  " est " << iddd << "!" << std::endl;
+        }
+        else {
+            std::cerr << "Pointeur nul détecté à l'index " << std::distance(vec.begin(), it) << std::endl;
+        } 
+    } 
 
 
     CaDiCaL::Solver * solver = new CaDiCaL::Solver;
@@ -79,4 +110,5 @@ int main(){
 
     */
    // g++ -std=c++20 -Wall -Wextra main.cpp -o testing
+   // cmake .. puis make
 }

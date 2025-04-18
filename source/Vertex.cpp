@@ -3,14 +3,22 @@
 
 
 
-int* adjacency;
+std::vector<int> adjacency;
+int Vertex::number = 0;
 int id;
 
-Vertex::Vertex(): id(0), adjacency(0){}; 
 
-Vertex::Vertex(int* adja){
+Vertex::Vertex(): adjacency(0){
 
-    this->id = 0;
+    number++;
+    this->id = number;
+
+}; 
+
+Vertex::Vertex(std::vector<int> adja){
+
+    number++;
+    this->id = number;
     this->adjacency = adja;
 }
 
@@ -20,7 +28,16 @@ int Vertex::Get_id(){
     return this->id;
 }
 
-int* Vertex::Get_adjacency(){
+std::vector<int> Vertex::Get_adjacency(){
 
     return this->adjacency;
+}
+
+void Vertex::Set_adjacency(std::vector<int> adja){
+
+    this->adjacency = adja;
+}
+void Vertex::Set_id(int id){
+
+    this->id = id;
 }
